@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ClipboardExample</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
+</resources>
