@@ -19,7 +19,12 @@ class FromUrlActivity : AppCompatActivity() {
         Log.d(TAG, "action: $action")
         val data: Uri? = intent?.data
         Log.d(TAG, "data: $data")
-        Toast.makeText(this, "Got this data: $data", Toast.LENGTH_LONG).show()
-        // TODO get extras?
+        val paramAndValue = data?.path?.removePrefix("/")?.split("/")
+        Toast.makeText(
+            this,
+            "Param[${paramAndValue?.get(0)}]: ${paramAndValue?.get(1)}",
+            Toast.LENGTH_LONG
+        )
+            .show()
     }
 }
